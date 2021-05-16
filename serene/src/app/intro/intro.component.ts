@@ -5,7 +5,7 @@ import {
   transition,
   trigger,
 } from "@angular/animations";
-import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from "@angular/core";
 
 @Component({
   selector: "app-intro",
@@ -23,11 +23,11 @@ import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
       state(
         "end",
         style({
-          width: "100%",
+          width: "20%",
           opacity: 1,
         })
       ),
-      transition("start => end", [animate("7s")]),
+      transition("start => end", [animate("4s")]),
     ]),
   ],
 })
@@ -35,10 +35,13 @@ export class IntroComponent implements OnInit {
   isStart = true;
   constructor(private readonly cd: ChangeDetectorRef) {}
 
+  @Output() fadeInContent = new EventEmitter<void>();
+
   ngOnInit() {
     setTimeout(() => {
       this.isStart = false;
       this.cd.markForCheck();
+      this.fadeInContent.emit();
     }, 1000);
   }
 }
