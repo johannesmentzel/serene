@@ -1,1 +1,8 @@
-<p>content works!</p>
+<div [ngSwitch]="activeContent$ | async">
+    <div *ngSwitchCase="'welcome'">
+        <app-content-welcome></app-content-welcome>
+    </div>
+    <div *ngSwitchCase="'ourServices'">OUR SERVICES</div>
+    <div *ngSwitchCase="'contact'">CONTACT</div>
+    <div *ngSwitchDefault>WELCOME</div>
+</div>

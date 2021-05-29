@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuContentService } from './menu-content.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  contentList$ = this.menuContentService.contentList$; 
+
+  constructor(private readonly menuContentService: MenuContentService) { }
 
   ngOnInit() {
+  }
+
+  onClickButton(contentName: string): void {
+   this.menuContentService.updateContentVisibility(contentName);
   }
 
 }

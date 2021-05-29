@@ -1,4 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$serene-palette: (
+    50 : #fcf6e1,
+    100 : #f6e7b5,
+    200 : #f1d883,
+    300 : #ebc851,
+    400 : #e6bc2c,
+    500 : #e2b007,
+    600 : #dfa906,
+    700 : #daa005,
+    800 : #d69704,
+    900 : #cf8702,
+    A100 : #fffcf6,
+    A200 : #ffe7c3,
+    A400 : #ffd390,
+    A700 : #ffc977,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $serene-primary: mat.define-palette(mat.$indigo-palette);
+$serene-primary: mat.define-palette($serene-palette);
+$serene-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$serene-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$serene-theme: mat.define-light-theme((
+  color: (
+    primary: $serene-primary,
+    accent: $serene-accent,
+    warn: $serene-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($serene-theme);
+
+
 body {
   background-color: #e2b007;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

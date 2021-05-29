@@ -16,18 +16,18 @@ import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from "@ang
       state(
         "start",
         style({
-          width: "300%",
+          width: "500%",
           opacity: 0.2,
         })
       ),
       state(
         "end",
         style({
-          width: "20%",
+          width: "100%",
           opacity: 1,
         })
       ),
-      transition("start => end", [animate("4s")]),
+      transition("start => end", [animate("3s")]),
     ]),
   ],
 })
