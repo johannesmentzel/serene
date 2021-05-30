@@ -1,11 +1,9 @@
-<div class="menu-items">
-    <button
-        *ngFor="let item of (contentList$ | async)"
-        mat-raised-button
-        color="primary"
-        class="item"
-        (click)="onClickButton(item.name)"
-    >
-        {{ item.label}}
-    </button>
-</div>
+<button
+    *ngFor="let item of (contentList$ | async)"
+    mat-raised-button
+    color="primary"
+    class="item"
+    (click)="onClickButton(item.name)"
+>
+    {{ item.label}}
+</button>
