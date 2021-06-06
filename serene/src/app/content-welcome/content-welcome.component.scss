@@ -1,7 +1,18 @@
 :host {
   width: 100%;
   height: 100%;
-  display: flex; 
+  display: flex;
+}
+
+.welcome-header {
+  font-size: 3.5vh;
+  padding: 1vh 1vw 1vh 0;
+  font-weight: 500;
+}
+
+.serene {
+  height: 4.7vh;
+  transform: translateY(2vh);
 }
 
 .wrapper {
@@ -10,11 +21,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin: 5%;
 }
 
 .map {
   width: 100%;
   height: 50vh;
+  margin-top: 2vh;
 }
