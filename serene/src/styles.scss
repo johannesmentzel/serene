@@ -71,7 +71,7 @@ $serene-theme: mat.define-light-theme(
 
 body {
   // background-color: #e2b007;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/AddisView.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/serene-eedb7.appspot.com/o/Products3.jpg?alt=media&token=7ee79456-739b-4f29-b1da-4e845242ad57");
   background-position-y: center;
   background-size: 100%;
 }
@@ -87,7 +87,7 @@ body {
 
 .header {
   font-size: 30px;
-  padding: 1vh 1vw 1vh 0;
+  padding: 1vh 1vw 1vh 1vw;
   font-weight: 500;
 
   @media (max-width: 800px) {
