@@ -30,12 +30,22 @@ export class MenuContentService {
       label: "Contact",
       isVisible: false,
     },
+
+    gallery: {
+      name: "gallery",
+      label: "Gallery",
+      isVisible: false,
+    },
   };
 
-  contentItemsSource = new BehaviorSubject<ContentItems>(this.contentItems);
-  contentItems$ = this.contentItemsSource.asObservable();
+  private readonly contentItemsSource = new BehaviorSubject<ContentItems>(
+    this.contentItems
+  );
+  private readonly contentItems$ = this.contentItemsSource.asObservable();
 
-  contentList$: Observable<Array<ContentItem>> = this.contentItems$.pipe(
+  readonly contentList$: Observable<
+    Array<ContentItem>
+  > = this.contentItems$.pipe(
     map((contentItems) => Object.values(contentItems))
   );
 

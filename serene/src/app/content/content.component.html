@@ -1,13 +1,23 @@
 <ng-container [ngSwitch]="activeContent$ | async">
+
     <ng-container *ngSwitchCase="'welcome'">
         <app-content-welcome></app-content-welcome>
     </ng-container>
 
-    <ng-container *ngSwitchCase="'ourServices'">UNDER CONSTRUCTION</ng-container>
+    <ng-container *ngSwitchCase="'ourServices'">
+        <app-content-services></app-content-services>
+    </ng-container>
 
-    <ng-container *ngSwitchCase="'contact'">UNDER CONSTRUCTION</ng-container>
+    <ng-container *ngSwitchCase="'contact'">
+        <app-content-contact></app-content-contact>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'gallery'">
+        <app-content-gallery></app-content-gallery>
+    </ng-container>
 
     <ng-container *ngSwitchDefault>
         <app-content-welcome></app-content-welcome>
     </ng-container>
+
 </ng-container>

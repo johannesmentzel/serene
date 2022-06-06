@@ -2,7 +2,11 @@
   background-color: #f1d883;
   border-radius: 10px;
   overflow: overlay;
-  padding: 0 5%;
+  padding: 2vh 16vw;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 800px) {
+    padding: 1vh 8vw;
+  }
 }

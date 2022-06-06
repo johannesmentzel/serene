@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "serene-eedb7": {
+      "hosting": {
+        "serene": [
+          "serene-eedb7"
+        ]
+      }
+    }
+  }
+}

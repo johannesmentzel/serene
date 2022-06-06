@@ -16,7 +16,7 @@ import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from "@ang
       state(
         "start",
         style({
-          width: "400%",
+          width: "800%",
           opacity: 0.2,
         })
       ),

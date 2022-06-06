@@ -1,0 +1,13 @@
+.service-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  .service-icon {
+    height: 40px;
+  }
+
+  .service {
+    margin-left: 10px;
+  }
+}

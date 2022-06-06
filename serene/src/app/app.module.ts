@@ -10,6 +10,9 @@ import { ContentComponent } from "./content/content.component";
 import { MatButtonModule } from "@angular/material/button";
 import { ContentWelcomeComponent } from "./content-welcome/content-welcome.component";
 import { GoogleMapsModule } from "@angular/google-maps";
+import { ContentContactComponent } from './content-contact/content-contact.component';
+import { ContentServicesComponent } from './content-services/content-services.component';
+import { ContentGalleryComponent } from './content-gallery/content-gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { GoogleMapsModule } from "@angular/google-maps";
     MenuComponent,
     ContentComponent,
     ContentWelcomeComponent,
+    ContentContactComponent,
+    ContentServicesComponent,
+    ContentGalleryComponent,
   ],
   imports: [
     BrowserModule,
