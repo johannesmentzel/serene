@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
     map((items) => items.find((item) => item.isVisible === true).name)
   );
 
+
   constructor(private readonly menuContentService: MenuContentService) {}
 
   ngOnInit() {}

@@ -27,7 +27,7 @@ import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from "@ang
           opacity: 1,
         })
       ),
-      transition("start => end", [animate("3s")]),
+      transition("start => end", [animate("2s")]),
     ]),
   ],
 })

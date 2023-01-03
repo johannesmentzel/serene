@@ -3,8 +3,8 @@
   border-radius: 10px;
   overflow: overlay;
   padding: 2vh 16vw;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  position: relative; 
 
   @media (max-width: 800px) {
     padding: 1vh 8vw;

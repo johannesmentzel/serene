@@ -13,6 +13,7 @@ import { GoogleMapsModule } from "@angular/google-maps";
 import { ContentContactComponent } from './content-contact/content-contact.component';
 import { ContentServicesComponent } from './content-services/content-services.component';
 import { ContentGalleryComponent } from './content-gallery/content-gallery.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContentGalleryComponent } from './content-gallery/content-gallery.compo
     BrowserAnimationsModule,
     MatButtonModule,
     GoogleMapsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

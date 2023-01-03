@@ -19,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
           opacity: 1,
         })
       ),
-      transition("start => end", [animate("2s")]),
+      transition("start => end", [animate("1s")]),
     ]),
   ],
 })
@@ -34,7 +34,7 @@ export class WelcomeComponent implements OnInit {
   onFadeInContent(): void {
     setTimeout(() => {
       this.isStart = false;
-    }, 4000) 
+    }, 3000) 
   }
 
 }
